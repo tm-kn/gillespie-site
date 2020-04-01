@@ -105,7 +105,7 @@ def export_graph(format="svg"):
             infected_population=int(request.args.get("infected_population", 1)),
         )
     )
-    plt.cfl()
+    plt.clf()
     plt.plot(
         [x.time for x in data],
         [x.susceptible_population for x in data],
