@@ -124,9 +124,9 @@ def export_graph(format="svg"):
         "g",
         label="Recovered",
     )
-    plt.xlabel("Tme units (generic) log scale")
+    plt.xlabel("Tme units (generic) scale")
     plt.ylabel("Cases from 1 index case")
-    plt.title("Susceptible, Infected and Recovered - cases vs. log (time)")
+    plt.title("Susceptible, Infected and Recovered - cases vs. time")
     plt.legend()
     file_object = tempfile.TemporaryFile()
     plt.savefig(file_object, dpi=300, format=format, orientation="landscape")
