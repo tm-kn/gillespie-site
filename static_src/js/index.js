@@ -80,10 +80,7 @@ async function loadChart() {
 
     plotOptions: {
       series: {
-        label: {
-          connectorAllowed: false,
-        },
-        pointStart: 2010,
+        turboThreshold: 0,
       },
     },
 
