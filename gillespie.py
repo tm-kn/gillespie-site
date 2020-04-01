@@ -54,10 +54,10 @@ def gillespie(
             / spatial_parameter
         )
         w2 = rate_of_cure * infected_population
-        W = w1 + w2
-        dt = -math.log(random.uniform(0.0, 1.0)) / W
+        w = w1 + w2
+        dt = -math.log(random.uniform(0.0, 1.0)) / w
         time += dt
-        if random.uniform(0.0, 1.0) < w1 / W:
+        if random.uniform(0.0, 1.0) < w1 / w:
             susceptible_population = susceptible_population - 1
             infected_population = infected_population + 1
         else:

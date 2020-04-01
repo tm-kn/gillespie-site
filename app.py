@@ -92,9 +92,10 @@ def default_graph_export():
 def export_graph(format="svg"):
     if format not in ("svg", "png"):
         return abort(400, "Invalid format requested")
+    population = int(request.args.get("population", 350))
     data = list(
         gillespie(
-            population=int(request.args.get("population", 350)),
+            population=population,
             maximum_elapsed_time=float(request.args.get("maximum_elapsed_time", 1000)),
             start_time=float(request.args.get("start_time", 0.0)),
             spatial_parameter=float(request.args.get("spatial_parameter", 100.0)),
@@ -105,6 +106,12 @@ def export_graph(format="svg"):
             infected_population=int(request.args.get("infected_population", 1)),
         )
     )
+    len_data = len(data)
+    if len_data > 500:
+        while len_data > 500:
+            len_data = len(data)
+            step = int(len_data / 500) + 1
+            data = data[::step]
     plt.clf()
     plt.plot(
         [x.time for x in data],
