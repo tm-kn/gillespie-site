@@ -1,8 +1,7 @@
 ## Requirements
 
-* Python 3.6+
-* Node.js 12 (you can use `nvm use` - [more details](https://github.com/nvm-sh/nvm))
-
+- Python 3.6+
+- Node.js 12 (you can use [nvm](https://github.com/nvm-sh/nvm) - `nvm install 12`, `nvm use 12`)
 
 ## Installation
 
@@ -39,11 +38,13 @@ npm run build
 ## Running dev server
 
 Activate virtual environment
+
 ```sh
 . venv/bin/activate
 ```
 
 Start the server.
+
 ```sh
 FLASK_ENV=development flask run
 ```
