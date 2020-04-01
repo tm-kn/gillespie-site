@@ -51,7 +51,8 @@ FLASK_ENV=development flask run
 
 ## Running front-end watcher
 
-If you want to change static files, please run:
+If you want to make change static files (e.g. JavaScript), please run a build
+watcher that will re-build static assets on a file change.
 
 ```sh
 npm start
