@@ -12,7 +12,6 @@
   "license": "MIT",
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
-    "highcharts": "^8.0.4",
     "url-polyfill": "^1.1.8",
     "whatwg-fetch": "^3.0.0"
   },
