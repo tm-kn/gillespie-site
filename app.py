@@ -12,7 +12,10 @@ from flask import (
     redirect,
     url_for,
 )
-import matplotlib.pyplot as plt
+import matplotlib
+
+matplotlib.use("Agg")
+from matplotlib.figure import Figure
 
 from gillespie import gillespie
 
@@ -102,7 +105,7 @@ def export_graph(format="svg"):
             infected_population=int(request.args.get("infected_population", 1)),
         )
     )
-    plt.clf()
+    plt.cfl()
     plt.plot(
         [x.time for x in data],
         [x.susceptible_population for x in data],
