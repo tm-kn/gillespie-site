@@ -15,7 +15,7 @@ from flask import (
 import matplotlib
 
 matplotlib.use("Agg")
-from matplotlib.figure import Figure
+import matplotlib.pyplot as plt
 
 from gillespie import gillespie
 
