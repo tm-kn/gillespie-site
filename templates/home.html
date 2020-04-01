@@ -1,0 +1,40 @@
+ <!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <div id="chart-container" style="height: 500px"></div>
+    <form id="algorithm-paramters-form">
+        <div>
+            <label for="population">Population</label>
+            <input required type="number" id="population" value="350">
+        </div>
+        <div>
+            <label for="maximum_elapsed_time">Maximum elapsed time</label>
+            <input required type="number" id="maximum_elapsed_time" value="100.0" step="0.001">
+        </div>
+        <div>
+            <label for="start_time">Start time</label>
+            <input required type="number" id="start_time" value="0.0" step="0.001">
+        </div>
+        <div>
+            <label for="spatial_parameter">Spatial paramter</label>
+            <input required type="number" id="spatial_parameter" value="100.0" step="0.001">
+        </div>
+        <div>
+            <label for="rate_of_infection_after_contact">Rate of infection after contact</label>
+            <input required type="number" id="rate_of_infection_after_contact" value="10.0" step="0.001">
+        </div>
+        <div>
+            <label for="rate_of_cure">Rate of cure</label>
+            <input required type="number" id="rate_of_cure" value="0.5" step="0.001">
+        </div>
+        <div>
+            <label for="infected_population">Infected population</label>
+            <input required type="number" id="infected_population" value="1">
+        </div>
+        <button type="submit">Redraw</button>
+    </form>
+    <button type="button" id="download-csv-button">Download CSV</button>
+    <script src="{{ url_for("static", filename="js/main.js") }}" type="text/javascript"></script>
+</body>
+</html>

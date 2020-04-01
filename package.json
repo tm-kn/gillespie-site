@@ -1,0 +1,23 @@
+{
+  "name": "infections",
+  "version": "1.0.0",
+  "description": "```sh python3 -m venv venv . venv/bin/activate pip install -r requirements.txt npm install npm run build ```",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch --mode development",
+    "build": "webpack --mode production"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/polyfill": "^7.8.7",
+    "highcharts": "^8.0.4",
+    "url-polyfill": "^1.1.8",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
